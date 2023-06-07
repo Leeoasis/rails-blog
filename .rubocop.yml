@@ -4,8 +4,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
-    - "bin/bundle" 
-
+    
   DisplayCopNames: true
 
 Layout/LineLength:
@@ -17,7 +16,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 160
 Metrics/BlockLength:
-  IgnoredMethods: ["db/schema.rb"]
+  IgnoredMethods: ['describe']
   Max: 30
 Metrics/CyclomaticComplexity:
   Max: 20
