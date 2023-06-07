@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby.exe
-# rubocop:disable Lint/ScriptPermission
 
 require 'fileutils'
 
@@ -33,5 +32,3 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'
 end
-
-# rubocop:enable Lint/ScriptPermission

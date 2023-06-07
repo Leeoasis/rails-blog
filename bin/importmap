@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
-# rubocop:disable Lint/ScriptPermission 
+# frozen_string_literal: true
 
 require_relative '../config/application'
 require 'importmap/commands'
-
-# rubocop:enable Lint/ScriptPermission
