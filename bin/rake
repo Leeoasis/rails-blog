@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby.exe
+# rubocop:disable Lint/ScriptPermission
+
 require_relative '../config/boot'
 require 'rake'
 Rake.application.run
+
+# rubocop:enable Lint/ScriptPermission

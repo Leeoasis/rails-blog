@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+# rubocop:disable Lint/ScriptPermission 
 
 require_relative '../config/application'
 require 'importmap/commands'
+
+# rubocop:enable Lint/ScriptPermission
