@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'posts/index'
-  get 'posts/show'
-  get 'users/index'
-  get 'users/show'
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index]
+  end
+  
+  get '/users/:user_id/posts/:id', to: 'posts#show'
 end
