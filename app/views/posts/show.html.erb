@@ -1,18 +1,1 @@
-<div class="border border-[#bdc3c7]  flex justify-between shadow-xl p-4">
-  <div>
-    <h1 class='text-2xl'><%= @post.title %></h1>
-    <p><%= @post.text %></p>
-  </div>
-  <div class='grid grid-row items-end gap-4'>
-    <p class='text-sm'>Comments: <%= @post.comment_counter %>, Likes: <%= @post.likes_counter %></p>
-  </div>
-</div>
-<div class="border-[#bdc3c7]  grid p-10 gap-10 shadow-xl ">
-  <% if @comments.empty? %>
-    <p>No Comments</p>
-  <% else %>
-    <% @comments.each do |comment| %>
-      <p><%= comment.author.name %>: <%= comment.text %></p>
-    <% end %>
-  <% end %>
-</div>
+<h1>Single post</h1>
