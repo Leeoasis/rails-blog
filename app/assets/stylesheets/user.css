@@ -1,0 +1,15 @@
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    padding: 1rem; /* Add padding to create space around the card */
+    border-radius: 8px; /* Add border radius for rounded corners */
+  }
+    
+  .user-details {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+  }
+  
