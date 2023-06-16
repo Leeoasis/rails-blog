@@ -1,0 +1,32 @@
+.post_detail_card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 5rem;
+  }
+
+  .post_title_card {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .post_author_name {
+    color: #333;
+  }
+  
+  .post_counters {
+    margin-left: auto;
+  }
+
+  .my_comments {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+  
+  
