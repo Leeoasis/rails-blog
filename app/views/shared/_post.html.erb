@@ -1,0 +1,11 @@
+<div class="post_card">
+  <h4>
+    <%= link_to "Post ##{post.id}", user_post_path(@user, post) %>
+  </h4>
+  <div class="post_content">
+    <p><%= post.title %></p>
+    <div>
+      <p class="post_counters">Comments: <%= post.comment_counter %>, Likes: <%= post.likes_counter %></p>
+    </div>
+  </div>
+</div>
