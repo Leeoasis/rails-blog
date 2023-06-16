@@ -1,13 +1,11 @@
 <% @users.each do |user| %>
-  <%= link_to user_path(user.id) do %>
-    <div class="user-card">
-      <div class="user-photo">
-        <img src="<%= user.photo %>" alt='user photo' />
-      </div>
-      <div class="user-details">
-        <h1><%= user.name %></h1>
-        <p>Number of posts: <%= user.posts_counter %></p>
-      </div>
-    </div>
+  <%= link_to user_path(user) do %>
+    <%= render 'shared/user', user: user %>
   <% end %>
 <% end %>
+
+<div class="button_holder">
+  <button class="create_post_btn">
+    <%= link_to 'Create new post', new_user_post_path(@current_user) %>
+  </button>
+</div>

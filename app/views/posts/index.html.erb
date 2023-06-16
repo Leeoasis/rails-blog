@@ -1,13 +1,14 @@
+<%= render 'shared/user', user:@user%>
 <% @posts.each do |post| %>
-  <%= link_to user_post_path(user_id: @user.id, author_id: post.id) do %>
-    <h1><%= post.title %></h1>
-    <p><%= post.text %></p>
+  <%= render 'shared/post', post:post %>
+
     <% if post.recent_comments.empty? %>
       <p>No comments</p>
     <% else %>
     <% post.recent_comments.each do |comment| %>
-  <p><%= comment.author.name %>: <%= comment.text %></p>
+      <%= render 'shared/comment', comment:comment %>
 <% end %>
     <% end %>
-  <% end %>
 <% end %>
+
+
