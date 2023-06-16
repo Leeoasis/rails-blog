@@ -1,0 +1,67 @@
+.comment_form_holder,
+.like_form_holder {
+  margin-top: 20px;
+}
+
+.comment_form_holder h3,
+.like_form_holder h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.form_buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.comment_form_holder input[type="submit"],
+.like_form_holder input[type="submit"] {
+  background-color: #007bff; /* Change to the desired button color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment_form_holder input[type="submit"]:hover,
+.like_form_holder input[type="submit"]:hover {
+  background-color: #0056b3; /* Change to the desired hover color */
+}
+
+.post_form {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.post_form h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.post_form div {
+  margin-bottom: 10px;
+}
+
+.post_title_input,
+.post_text_input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.post_button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post_button:hover {
+  background-color: #0056b3;
+}

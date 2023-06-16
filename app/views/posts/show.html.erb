@@ -1,13 +1,13 @@
-<div class="border border-[#bdc3c7]  flex justify-between shadow-xl p-4">
-  <div>
-    <h1 class='text-2xl'><%= @post.title %></h1>
-    <p><%= @post.text %></p>
+   <div class="post_detail_card_header"">
+   <div class="parent">
+    <p class ="post_title_card"> Post # <%=@post.id%> by <span class="post_author_name"><%=@post.author.name%></span></p>
+   <p><%= @post.text %></p>
   </div>
-  <div class='grid grid-row items-end gap-4'>
-    <p class='text-sm'>Comments: <%= @post.comment_counter %>, Likes: <%= @post.likes_counter %></p>
+    <p class="post_counters">Comments: <%=@post.comments_counter%> Likes: <%=@post.likes_counter%></p>
+  
   </div>
-</div>
-<div class="border-[#bdc3c7]  grid p-10 gap-10 shadow-xl ">
+
+<div class="my_comments">
   <% if @comments.empty? %>
     <p>No Comments</p>
   <% else %>
@@ -15,4 +15,17 @@
       <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
   <% end %>
+</div>
+
+<div class="comment_form_holder">
+  <h3>Leave a comment</h3>
+  <div class="form_buttons">
+    <%= render 'comments/form', comment: @comment %>
+  </div>
+</div>
+
+<div class="like_form_holder">
+  <div class="form_buttons">
+    <%= render 'likes/form', like: @like %>
+  </div>
 </div>
