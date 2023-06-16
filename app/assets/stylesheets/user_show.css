@@ -1,0 +1,51 @@
+.user_bio {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .post_card {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .post_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post_content p {
+    margin-right: 0; /* Remove default margin to align to the right */
+  }
+  
+  .post_counters {
+    margin-left: auto; /* Push the counters to the far right */
+  }
+
+  .see_all_posts {
+    text-align: center; /* Center the link within the div */
+    margin-top: 1rem; /* Add top margin for spacing */
+  }
+  
+  .see_all_posts a {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-decoration: none; /* Remove underline from the link */
+  }
+  
+  .see_all_posts a:hover {
+    background-color: #0056b3;
+  }
+  
+  
