@@ -19,7 +19,5 @@ RSpec.describe '/users', type: :request do
       #   expect(response.body).to include('List of all users')
       # end
     end
-
-    
   end
 end

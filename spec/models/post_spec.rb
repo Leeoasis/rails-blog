@@ -40,15 +40,15 @@ RSpec.describe Post, type: :model do
 
   describe 'recent_comments' do
     let(:author) { User.create!(name: 'John') }
-    let(:post) { Post.create!(title: 'Sample Post', author: author) }
+    let(:post) { Post.create!(title: 'Sample Post', author:) }
 
     it 'returns the 5 most recent comments for the post' do
-      comment1 = post.comments.create!(text: 'Comment 1', created_at: 3.days.ago, author: author)
-      comment2 = post.comments.create!(text: 'Comment 2', created_at: 2.days.ago, author: author)
-      comment3 = post.comments.create!(text: 'Comment 3', created_at: 1.day.ago, author: author)
-      comment4 = post.comments.create!(text: 'Comment 4', created_at: 4.days.ago, author: author)
-      comment5 = post.comments.create!(text: 'Comment 5', created_at: 5.days.ago, author: author)
-      post.comments.create!(text: 'Comment 6', created_at: 6.days.ago, author: author)
+      comment1 = post.comments.create!(text: 'Comment 1', created_at: 3.days.ago, author:)
+      comment2 = post.comments.create!(text: 'Comment 2', created_at: 2.days.ago, author:)
+      comment3 = post.comments.create!(text: 'Comment 3', created_at: 1.day.ago, author:)
+      comment4 = post.comments.create!(text: 'Comment 4', created_at: 4.days.ago, author:)
+      comment5 = post.comments.create!(text: 'Comment 5', created_at: 5.days.ago, author:)
+      post.comments.create!(text: 'Comment 6', created_at: 6.days.ago, author:)
 
       recent_comments = post.recent_comments
 
