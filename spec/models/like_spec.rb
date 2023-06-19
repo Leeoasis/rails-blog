@@ -9,14 +9,12 @@ RSpec.describe Like, type: :model do
     it { should belong_to(:post) }
   end
 
-  describe 'methods' do
-    describe '#update_likes_counter' do
-      it 'updates the likes_counter of the post' do
-        post.update(likes_counter: 2)
-        Like.create(author: user, post:)
-        post.reload
-        expect(post.likes_counter).to eq(2)
-      end
+  describe 'increment_post_likes_counter' do
+    it 'increments the likes_counter of the post' do
+      post.update(likes_counter: 2)
+      Like.create(author: user, post: post)
+      post.reload
+      expect(post.likes_counter).to eq(1)
     end
   end
 end
