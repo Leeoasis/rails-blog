@@ -1,6 +1,7 @@
    <div class="post_detail_card_header"">
    <div class="parent">
     <p class ="post_title_card"> Post # <%=@post.id%> by <span class="post_author_name"><%=@post.author.name%></span></p>
+   <h4><%= @post.title %></h4>
    <p><%= @post.text %></p>
   </div>
     <p class="post_counters">Comments: <%=@post.comments_counter%> Likes: <%=@post.likes_counter%></p>
