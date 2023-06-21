@@ -51,6 +51,5 @@ RSpec.describe 'Post Index Page', type: :feature do
       click_on "Post ##{@first_post.id}"
       expect(current_path).to eq(current_path)
     end
-      
-  end 
+  end
 end
