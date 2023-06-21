@@ -57,7 +57,6 @@ ActiveRecord::Schema[7.0].define(version: 20_230_621_103_002) do
   add_foreign_key 'posts', 'users', column: 'author_id'
 end
 
-
 ActiveRecord::Schema[7.0].define(version: 20_230_621_103_002) do
   create_table 'users', force: :cascade do |t|
     t.string 'name'
