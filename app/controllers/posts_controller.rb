@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @current_user = current_user
     if params[:user_id].present?
       @user = User.find(params[:user_id])
       @post = @user.posts.find(params[:id])
@@ -15,10 +16,12 @@ class PostsController < ApplicationController
   end
 
   def new
+    @current_user = current_user
     @post = @current_user.posts.new
   end
 
   def create
+    @current_user = current_user
     @post = @current_user.posts.new(post_params)
     if @post.save
       redirect_to user_posts_path(@current_user)
