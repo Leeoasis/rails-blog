@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
-
-  def set_current_user
-    @current_user = current_user
+  protect_from_forgery with: :exception
+  before_action :current_user
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end
