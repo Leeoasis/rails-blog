@@ -28,6 +28,16 @@
   margin-bottom: 1rem;
 }
 
+.user-card-2 {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
 .user-details {
   display: flex;
   align-items: center;

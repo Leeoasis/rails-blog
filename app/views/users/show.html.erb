@@ -13,7 +13,7 @@
       <%= render 'shared/post', post:post %>
    <%end%>
 <div class="see_all_posts">
-  <%= link_to 'See all posts', user_posts_path(user_id: @user.id) %>
+ <%= link_to 'See all posts', user_posts_path(@user, controller: 'posts') %>
 </div>
 <% end %>
 
