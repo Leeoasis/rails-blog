@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      get 'comments/index'
+      get 'comments/create'
+      get 'posts/index'
+      resources :users, only: [] do
+        resources :posts, only: [:index] do
+          resources :comments, only: %i[index create]
+        end
+      end
+    end
+  end
+
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,5 +1,6 @@
 class Ability
   include CanCan::Ability
+
   def initialize(user)
     # Define abilities for the user here. For example:
     #
@@ -7,12 +8,14 @@ class Ability
 
     can :read, :all
     can :create, [Comment, Post]
+
     if user.role == 'admin'
       can :manage, :all
     else
       can :destroy, Comment, author: user
       can :destroy, Post, author: user
     end
+
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions
