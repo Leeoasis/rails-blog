@@ -1,1 +1,9 @@
 <p><%= comment.author.name %>: <%= comment.text %></p>
+<% if can? :destroy, comment %>
+    <button>
+      <%= link_to 'Delete Comment',user_post_comment_path(@user, comment.post, comment.id) , data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+    </button>
+  <% end %>

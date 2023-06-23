@@ -1,13 +1,11 @@
-   <div class="post_detail_card_header"">
+<div class="post_detail_card_header"">
    <div class="parent">
     <p class ="post_title_card"> Post # <%=@post.id%> by <span class="post_author_name"><%=@post.author.name%></span></p>
    <h4><%= @post.title %></h4>
    <p><%= @post.text %></p>
   </div>
     <p class="post_counters">Comments: <%=@post.comments_counter%> Likes: <%=@post.likes_counter%></p>
-  
   </div>
-
 <div class="my_comments">
   <% if @comments.empty? %>
     <p>No Comments</p>
@@ -17,16 +15,24 @@
     <% end %>
   <% end %>
 </div>
-
 <div class="comment_form_holder">
   <h3>Leave a comment</h3>
   <div class="form_buttons">
     <%= render 'comments/form', comment: @comment %>
   </div>
 </div>
-
 <div class="like_form_holder">
   <div class="form_buttons">
     <%= render 'likes/form', like: @like %>
   </div>
 </div>
+<div class="button_holder">
+            <% if can? :destroy, @post%>
+              <button>
+                <%= link_to 'Delete post', user_post_path(@user,@post), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+              </button>
+           <% end %>
+        </div>
